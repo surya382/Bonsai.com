@@ -1,0 +1,10 @@
+.contract{
+    display: flex;
+    gap: 16px;
+}
+
+.featured{
+    border: 1px solid gray;
+    padding: 15px;
+}
+
