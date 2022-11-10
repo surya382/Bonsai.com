@@ -1,0 +1,9 @@
+.ques{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.ques:hover{
+
+    color: teal;
+}
