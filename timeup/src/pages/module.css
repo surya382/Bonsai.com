@@ -7,3 +7,50 @@
 
     color: teal;
 }
+
+
+#backimg{
+    background-image: url("https://app.hellobonsai.com/assets/signup/signup-panel-bg-d7dcdb0bac806bc05a740e6bd59c62439a7102882f57320e8ab25b40393f1b75.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.signbox{
+    display: flex;
+    height: 1000px;
+    width: 70%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+#sidebox{
+    background-image: url("https://app.hellobonsai.com/assets/signup/signup-panel-bg-d7dcdb0bac806bc05a740e6bd59c62439a7102882f57320e8ab25b40393f1b75.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 390px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+
+}
+
+
+#google:hover{
+ 
+    border: 1px solid teal;
+}
+
+
+#logbox{
+    height: 600px;
+    padding: 5px;
+    width: 40%;
+    margin: auto;
+    margin-top: 100px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

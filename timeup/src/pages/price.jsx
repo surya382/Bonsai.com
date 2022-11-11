@@ -16,6 +16,8 @@ function Price(){
     return (
         <div>
   <Navbar/>
+
+  <div id="backimg">
   <Montyhly plan={plan} changeplan={changeplan}/>
  
    <Heading>Super charge your work with add-ons</Heading>
@@ -147,7 +149,7 @@ function Price(){
 
 </Accordion>
   
-
+</div>
         </div>
     )
 }

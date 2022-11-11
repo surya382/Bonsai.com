@@ -13,7 +13,7 @@ const logo="https://document-export.canva.com/Nl5vY/DAFRXdNl5vY/4/thumbnail/0001
 
             <Flex justifyContent="space-around">
 
-                <Box id="logo" border="1px solid black" w="160px" h="80px">
+                <Box id="logo"  w="160px" h="80px">
                 <Image src={logo} w="100%" h="100%" />
                 </Box> 
 
@@ -92,7 +92,7 @@ const logo="https://document-export.canva.com/Nl5vY/DAFRXdNl5vY/4/thumbnail/0001
                 <HStack spacing={8}>
 
                     <Link to="/login"><Button id="log" colorScheme='teal' variant='outline'>LOG IN</Button></Link>
-                    <Box>Signup</Box>
+                    <Box><Button colorScheme="teal">Start Free</Button></Box>
                 </HStack>
 
 
