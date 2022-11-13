@@ -1,4 +1,5 @@
 import "./module.css"
+import Footer from "../components/footer";
 import { useState } from "react";
 import { Montyhly } from "../components/pri";
 import Navbar from "../components/Navbar";
@@ -150,6 +151,8 @@ function Price(){
 </Accordion>
   
 </div>
+
+  <Footer/>
         </div>
     )
 }
