@@ -1,4 +1,5 @@
-import { Box, HStack,Heading, Text, Flex, Divider, Image, Button,Switch} from "@chakra-ui/react";
+import { Box, HStack,Heading, Text, Flex,Image, Button,Switch} from "@chakra-ui/react";
+
 import "./nav.css"
  
  function Montyhly({plan,changeplan}){
@@ -6,7 +7,7 @@ import "./nav.css"
     return(
         <Box>
 
-<Flex border='1px solid black' mt={10} p={55} justifyContent="space-around" gap={4}>
+<Flex  mt={10} p={55} justifyContent="space-around" gap={4}>
 
 <Heading as="h1" fontFamily="'Proximanova opt,sans-serif'">Plans & Pricing</Heading>
 

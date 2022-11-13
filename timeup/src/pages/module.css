@@ -54,3 +54,32 @@
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+
+#bghome{
+    background-image: url("https://app.hellobonsai.com/assets/signup/signup-panel-bg-d7dcdb0bac806bc05a740e6bd59c62439a7102882f57320e8ab25b40393f1b75.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 20px;
+}
+
+#first{
+    
+    display: flex;
+    justify-content: space-around;
+    
+    padding: 50px;
+}
+
+
+#threediv{
+  
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+}
