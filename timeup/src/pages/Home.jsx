@@ -1,20 +1,22 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/footer";
-import {Box, Button, Flex, Heading, Image, Input, Text} from "@chakra-ui/react"
+import {Box, Button, Flex, Heading, Image, Input, Text, useColorMode} from "@chakra-ui/react"
 import { Link } from "react-router-dom";
 
+
 function Home(){
+  const { colorMode, toggleColorMode } = useColorMode();
 
     return(
         <div>
             <Navbar/>
          
-         <Box id="bghome">
+         <Box id="bghome" >
 
 
          <Box id="first" >
           
-          <Box  w="700px" pt={10} pb={2} textAlign="left">
+          <Box  w="700px" pt={10} pb={2} textAlign="left" >
              <Flex gap={4}>
                 <Image src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7c8e88feb67d_time-tracking%20colour.svg"/>
                 <Text color="teal" fontWeight="bold">Time Tracking</Text>
@@ -35,9 +37,9 @@ function Home(){
 
 
             
-            <Heading as="h2" size="lg"  m="auto" mt="100px" w="65%">A fully-featured time tracker that’s built specifically for  <span style={{color:"teal"}}>  online contract </span> work and invoicing clients.</Heading>
+            <Heading as="h2" size="lg"  m="auto" backgroundColor={colorMode=="dark"?"#26262f":"white"} mt="100px" w="65%">A fully-featured time tracker that’s built specifically for  <span style={{color:"teal"}}>  online contract </span> work and invoicing clients.</Heading>
 
-            <Box id="threediv">
+            <Box id="threediv" backgroundColor={colorMode=="dark"?"#26262f":"white"}>
 
              <Box  textAlign="left" w="250px">
                    <Image src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fde3f8e28c14c3d1e8b33_ill_Easily%20Billable.svg"/>
@@ -66,7 +68,7 @@ function Home(){
 
             </Box>
 
-            <Flex  justifyContent="space-between" w="90%" m="auto" mt="100px">
+            <Flex  justifyContent="space-between" w="90%" m="auto" mt="100px" backgroundColor={colorMode=="dark"?"#20202e":"white"}>
               
               <Box textAlign="left"  w="400px">
                 <Heading as="h2" size="lg" mt="150px">Invoice Hours</Heading>
@@ -80,7 +82,7 @@ function Home(){
 
 
 
-            <Flex  justifyContent="space-between" w="90%" m="auto" mt="100px">
+            <Flex backgroundColor={colorMode=="dark"?"#20202e":"white"} justifyContent="space-between" w="90%" m="auto" mt="100px">
               
             <Box w="600px"> <Image src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e6bc8038569d7612605c001_invoice%20timesheet-min.png" w="full"/></Box>
 
@@ -95,7 +97,7 @@ function Home(){
             </Flex>
 
 
-            <Flex  justifyContent="space-between" w="90%" m="auto" mt="100px">
+            <Flex backgroundColor={colorMode=="dark"?"#20202e":"white"} justifyContent="space-between" w="90%" m="auto" mt="100px">
               
               <Box textAlign="left"  w="400px">
                 <Heading as="h2" size="lg" mt="150px">Use It Anywhere</Heading>
@@ -107,10 +109,10 @@ function Home(){
 
             </Flex>
 
-            <Heading as="h1" size="lg" m="auto" mt="40px" w="45%">Trusted by 500K+ self-employed workers and small businesses</Heading>
-                <Text fontSize="xl" m="auto" mt="20px" w="45%">Whether you’re just getting started or your business is booming, Bonsai has you covered.</Text>
+            <Heading backgroundColor={colorMode=="dark"?"#20202e":"white"} as="h1" size="lg" m="auto" mt="40px" w="45%">Trusted by 500K+ self-employed workers and small businesses</Heading>
+                <Text backgroundColor={colorMode=="dark"?"#20202e":"white"} fontSize="xl" m="auto" mt="20px" w="45%">Whether you’re just getting started or your business is booming, Bonsai has you covered.</Text>
 
-                    <Flex  justifyContent="space-between" m="auto" mt="20px" w="50%">
+                    <Flex backgroundColor={colorMode=="dark"?"#20202e":"white"} justifyContent="space-between" m="auto" mt="20px" w="50%">
 
                       <Box  w="300px" textAlign="left">
                                

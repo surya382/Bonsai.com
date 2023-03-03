@@ -1,10 +1,12 @@
-import {Flex,Box,Image,Text,HStack,Heading} from "@chakra-ui/react"
+import {Flex,Box,Image,Text,HStack,Heading, useColorMode} from "@chakra-ui/react"
 import "./side.css"
 
 function Tempcont(){
 
+       const { colorMode, toggleColorMode } = useColorMode();
+
     return(
-        <Box p={5}>
+        <Box p={5} backgroundColor={colorMode=="dark"?"#26262f":"white"}>
 
             <HStack spacing={6}>
                 <Box display="flex" flexDirection="column" gap={6}>

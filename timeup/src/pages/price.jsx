@@ -3,12 +3,15 @@ import Footer from "../components/footer";
 import { useState } from "react";
 import { Montyhly } from "../components/pri";
 import Navbar from "../components/Navbar";
-import { Accordion, AccordionButton, AccordionIcon, AccordionItem, Box, Button, Heading, Text, VStack,AccordionPanel } from "@chakra-ui/react";
+import { Accordion, AccordionButton, AccordionIcon, AccordionItem, Box, Button, Heading, Text, VStack,AccordionPanel, useColorMode } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 
 function Price(){
 
     const [plan,setplan]=useState(false);
+    const { colorMode, toggleColorMode } = useColorMode();
+
+    
 
     const changeplan=()=>{
       setplan(!plan);
@@ -18,12 +21,12 @@ function Price(){
         <div>
   <Navbar/>
 
-  <div id="backimg">
+  <div id="backimg" >
   <Montyhly plan={plan} changeplan={changeplan}/>
  
-   <Heading>Super charge your work with add-ons</Heading>
+   <Heading backgroundColor={colorMode=="dark"?"#26262f":"white"}>Super charge your work with add-ons</Heading>
 
-   <VStack mt={16} spacing={4}>
+   <VStack mt={16} spacing={4} backgroundColor={colorMode=="dark"?"#26262f":"white"}>
 
     <Box  boxShadow='lg'  w="80%" p={8} display="flex" justifyContent="space-between">
       <Box textAlign="left">
@@ -63,8 +66,8 @@ function Price(){
    </VStack>
   
 
-   <Box display="flex" bg="teal.50" justifyContent="space-between" m="auto" p={27} mt={40}  w="70%">
-        <Box textAlign="left"><Heading as="h1" size="2xl">It’s <span style={{color:"teal"}}>your</span> business.</Heading>
+   <Box  display="flex" bg="teal.50" justifyContent="space-between" m="auto" p={27} mt={40}  w="70%">
+        <Box backgroundColor={colorMode=="dark"?"#26262f":"white"} textAlign="left"><Heading as="h1" size="2xl">It’s <span style={{color:"teal"}}>your</span> business.</Heading>
             <Heading as="h1" size="2xl"> We’re here to help it grow.</Heading>
         </Box>
 
@@ -75,7 +78,7 @@ function Price(){
 
     <Heading mt={20} color="teal">Frequently Asked Questions</Heading>
 
-    <Accordion allowToggle  width="60%" margin="auto" mt={10}>
+    <Accordion backgroundColor={colorMode=="dark"?"#26262f":"white"} allowToggle  width="60%" margin="auto" mt={10}>
   <AccordionItem border="none">
     <h2>
       <AccordionButton>

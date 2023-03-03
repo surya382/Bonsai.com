@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+// import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from '@chakra-ui/react';
 import {BrowserRouter} from "react-router-dom"
 import AuthContextProvider from './context/Authcontext';
+import { ColorModeScript } from "@chakra-ui/color-mode";
+
+import theme from './theme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ChakraProvider>
+  <ChakraProvider theme={theme}>
+     <ColorModeScript initialColorMode={theme.config.initialColorMode} />
     <BrowserRouter>
     <AuthContextProvider>
     <App />

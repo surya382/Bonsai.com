@@ -1,10 +1,11 @@
-import { Box, HStack, Text } from "@chakra-ui/react";
+import { Box, HStack, Text, useColorMode } from "@chakra-ui/react";
 import "./nav.css"
 
 function Footer(){
 
+    const { colorMode, toggleColorMode } = useColorMode();
     return(
-        <Box  id="foot">
+        <Box  id="foot" backgroundColor={colorMode=="dark"?"#20202e":"white"}>
           
           <HStack spacing="300px">
 

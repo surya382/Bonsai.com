@@ -1,7 +1,7 @@
 import { Link,useNavigate } from "react-router-dom";
 import React from "react";
 import "./module.css"
-import {Flex,Spacer,Box,HStack, Image, Text, Button, Input, Checkbox, useDisclosure, AlertDialog, AlertDialogOverlay, AlertDialogContent, AlertDialogHeader, AlertDialogBody, AlertDialogFooter} from "@chakra-ui/react"
+import {Flex,Spacer,Box,HStack, Image, Text, Button, Input, Checkbox, useDisclosure, AlertDialog, AlertDialogOverlay, AlertDialogContent, AlertDialogHeader, AlertDialogBody, AlertDialogFooter, useColorMode} from "@chakra-ui/react"
 import { useState } from "react";
 import { useContext } from "react";
 import { AuthContext } from "../context/Authcontext";
@@ -20,6 +20,8 @@ function Login(){
     const navigate=useNavigate();
 
     const { isOpen, onOpen, onClose } = useDisclosure()
+    const { colorMode, toggleColorMode } = useColorMode();
+
   const cancelRef = React.useRef()
 
     const handlechange=(e)=>{
@@ -64,12 +66,12 @@ function Login(){
     
     
        
-    const logo="https://document-export.canva.com/Nl5vY/DAFRXdNl5vY/4/thumbnail/0001.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUHWDTJW6UD%2F20221108%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221108T131355Z&X-Amz-Expires=6950&X-Amz-Signature=ce115259bea4df4c565581cfc5d50aa4ff1c530de920d07ae89b9d662dc3f0f3&X-Amz-SignedHeaders=host&response-expires=Tue%2C%2008%20Nov%202022%2015%3A09%3A45%20GMT"
+    const logo="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7cd432feb68e_bonsai-logo.svg"
    
     return(
        <Box  bg="rgba(0, 0, 0, 0.04)">
        <Flex justifyContent="space-between" p={5} borderBottom="1px solid grey">
-              <Box   w="150px" h="60px">
+              <Box   w="150px" h="60px" >
                 <Image src={logo} w="100%" h="90%" />
                 </Box>
 
@@ -87,22 +89,22 @@ function Login(){
        </Flex>
 
 
-            <Box  id="logbox">
-                <Text fontSize={30}>Sign In</Text>
+            <Box  id="logbox" backgroundColor={colorMode=="dark"?"#26262f":"white"}>
+                <Text fontSize={30} backgroundColor={colorMode=="dark"?"#26262f":"white"}>Sign In</Text>
 
-                <Button w="400px" variant="outline" id="google" mt={10} textAlign="left">
-                  <Box w="20px" mr={8}> <Image src="https://i.stack.imgur.com/22WR2m.png" w="full" h="full" /></Box>
-                 <Text>Sign In with Google</Text></Button>
+                <Button backgroundColor={colorMode=="dark"?"#26262f":"white"} w="400px" variant="outline" id="google" mt={10} textAlign="left">
+                  <Box backgroundColor={colorMode=="dark"?"#26262f":"white"} w="20px" mr={8}> <Image src="https://i.stack.imgur.com/22WR2m.png" w="full" h="full" /></Box>
+                 <Text backgroundColor={colorMode=="dark"?"#26262f":"white"}>Sign In with Google</Text></Button>
 
-                 <Text color="gray.500" mt={5}>----or----</Text>
+                 <Text backgroundColor={colorMode=="dark"?"#26262f":"white"} color="gray.500" mt={5}>----or----</Text>
 
-                 <Input type='email' mt={5} w="400px" placeholder="Email" name="email" value={user.email} onChange={handlechange}/>
+                 <Input backgroundColor={colorMode=="dark"?"#26262f":"white"} type='email' mt={5} w="400px" placeholder="Email" name="email" value={user.email} onChange={handlechange}/>
 
-                 <Input type='password' mt={5} w="400px" placeholder="Password" name="password" value={user.password} onChange={handlechange}/>
+                 <Input backgroundColor={colorMode=="dark"?"#26262f":"white"} type='password' mt={5} w="400px" placeholder="Password" name="password" value={user.password} onChange={handlechange}/>
 
-                 <Box mt={5}><Checkbox >Remember me</Checkbox></Box>
+                 <Box backgroundColor={colorMode=="dark"?"#26262f":"white"} mt={5}><Checkbox >Remember me</Checkbox></Box>
 
-                 <Button w="400px" colorScheme="teal" mt={5} onClick={loginuser}>Log In</Button>
+                 <Button backgroundColor={colorMode=="dark"?"#26262f":"white"} w="400px" colorScheme="teal" mt={5} onClick={loginuser}>Log In</Button>
 
                  <AlertDialog
         isOpen={isOpen}

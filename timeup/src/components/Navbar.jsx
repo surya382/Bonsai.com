@@ -1,12 +1,16 @@
 import {Link} from "react-router-dom"
 import "./nav.css"
 import {ChevronDownIcon,ChevronRightIcon} from "@chakra-ui/icons"
+import { useColorMode } from "@chakra-ui/color-mode";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import Workflow from "./sideitem/bonsaiwork"
 import Tempcont from "./sideitem/tempcont"
 import {Box,Image,Flex,HStack,Spacer,Text,Heading,Divider,VStack, Button} from "@chakra-ui/react"
 
 function Navbar(){
-const logo="https://document-export.canva.com/Nl5vY/DAFRXdNl5vY/4/thumbnail/0001.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUHWDTJW6UD%2F20221108%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221108T131355Z&X-Amz-Expires=6950&X-Amz-Signature=ce115259bea4df4c565581cfc5d50aa4ff1c530de920d07ae89b9d662dc3f0f3&X-Amz-SignedHeaders=host&response-expires=Tue%2C%2008%20Nov%202022%2015%3A09%3A45%20GMT"
+const logo="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5e5fd7c602ca7cd432feb68e_bonsai-logo.svg"
+
+const { colorMode, toggleColorMode } = useColorMode();
 
     return(
         <Box id="nav" p={2}>
@@ -17,19 +21,19 @@ const logo="https://document-export.canva.com/Nl5vY/DAFRXdNl5vY/4/thumbnail/0001
                 <Image src={logo} w="100%" h="100%" />
                 </Box> 
 
-                <HStack spacing={10}>
+                <HStack spacing={10} >
                   
                   <Box className="product">
                   <Box>
                     <Text fontSize="20px">Product  <ChevronDownIcon/></Text>
                     </Box>
 
-                    <Box id="pcontent">
+                    <Box id="pcontent" >
 
-                        <VStack spacing={5}>
-                            <Box>
+                        <VStack spacing={5} backgroundColor={colorMode=="dark"?"#26262f":"white"}>
+                            <Box >
 
-                                <Box  id="onhoverside">
+                                <Box  id="onhoverside" >
 
                                     <Flex>
                         <Box className="box">
@@ -39,7 +43,7 @@ const logo="https://document-export.canva.com/Nl5vY/DAFRXdNl5vY/4/thumbnail/0001
                       <Box id="icon"> <ChevronRightIcon/></Box>
 
                      <Box id="sidecont">
-                         <Workflow/>
+                         <Workflow />
 
                       </Box>
 
@@ -72,14 +76,14 @@ const logo="https://document-export.canva.com/Nl5vY/DAFRXdNl5vY/4/thumbnail/0001
                   </Box>
 
 
-                  <Box id="template">
+                  <Box id="template" >
                     <Box >
                     <Text fontSize="20px">Template <ChevronDownIcon/></Text>
                     
                     </Box>
 
-                    <Box id="tempcontent">
-                     <Tempcont/>
+                    <Box id="tempcontent" >
+                     <Tempcont />
                     </Box>
                     </Box>
 
@@ -93,6 +97,12 @@ const logo="https://document-export.canva.com/Nl5vY/DAFRXdNl5vY/4/thumbnail/0001
 
                     <Link to="/login"><Button id="log" colorScheme='teal' variant='outline'>LOG IN</Button></Link>
                     <Box><Button colorScheme="teal">Start Free</Button></Box>
+
+                    <Button  onClick={() => toggleColorMode()}>{colorMode === "dark" ? (
+             <SunIcon color="orange.200" />
+              ) : (
+            <MoonIcon color="blue.700" />
+             )}</Button>
                 </HStack>
 
 

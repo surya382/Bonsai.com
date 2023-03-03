@@ -1,11 +1,13 @@
-import { Box, HStack,Heading, Text, Flex,Image, Button,Switch} from "@chakra-ui/react";
+import { Box, HStack,Heading, Text, Flex,Image, Button,Switch, useColorMode} from "@chakra-ui/react";
 
 import "./nav.css"
  
  function Montyhly({plan,changeplan}){
 
+  const { colorMode, toggleColorMode } = useColorMode();
+
     return(
-        <Box>
+        <Box backgroundColor={colorMode=="dark"?"#20202e":"white"}>
 
 <Flex  mt={10} p={55} justifyContent="space-around" gap={4}>
 
